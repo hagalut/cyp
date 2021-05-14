@@ -82,6 +82,9 @@ inputs:
 outputs:
   dashboardUrl:
     description: 'Cypress Dashboard URL if the run was recorded'
+runs:
+  using: 'node12'
+  main: 'index.html'
 branding:
   color: 'green'
   icon: 'check-square'
