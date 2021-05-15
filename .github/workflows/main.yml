@@ -3,6 +3,7 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-20.04
+    name: E2E cyp on Electron
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -13,7 +14,7 @@ jobs:
   cypress-run2:
     runs-on: ubuntu-20.04
     # let's make sure our tests pass on Chrome browser
-    name: E2E on Chrome
+    name: E2E cyp on Chrome
     steps:
       - uses: actions/checkout@v2
       - uses: cypress-io/github-action@v2
