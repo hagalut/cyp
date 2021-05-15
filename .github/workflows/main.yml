@@ -10,9 +10,6 @@ jobs:
       # and run all Cypress core tests
       - name: Runnning E2E regression test suite with cypress...
         uses: cypress-io/github-action@v2
-name: E2E on Chrome
-on: [push]
-jobs:
   cypress-run:
     runs-on: ubuntu-20.04
     # let's make sure our tests pass on Chrome browser
