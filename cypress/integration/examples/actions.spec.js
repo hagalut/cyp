@@ -1,4 +1,4 @@
-/// <reference types="cypress core tests" />
+/// <reference types="cypress" />
 
 context('Actions', () => {
   beforeEach(() => {

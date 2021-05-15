@@ -8,5 +8,5 @@ jobs:
         uses: actions/checkout@v2
       # Install NPM dependencies, cache them correctly
       # and run all Cypress core tests
-      - name: cypress core tests run
+      - name: Runnning E2E regression test suite with cypress
         uses: cypress-io/github-action@v2

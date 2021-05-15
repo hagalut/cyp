@@ -4,7 +4,7 @@
 // If you're unfamiliar with how Cypress works,
 // check out the link below and learn how to write your first test:
 // https://on.cypress.io/writing-first-test
-/// <reference types="cypress core tests" />
+/// <reference types="cypress" />
 
 context('Actions', () => {
     beforeEach(() => {
@@ -14,7 +14,6 @@ context('Actions', () => {
     // https://on.cypress.io/interacting-with-elements
   
     it('.type() - type into a DOM element', () => {
-    cy.wait(300);
       cy.get('#ytplayer').click();
     })
   })
