@@ -1,9 +1,9 @@
 name: End-to-end tests
 on: [push]
 jobs:
-  cypress-run:
+  cypress-run-electron:
     runs-on: ubuntu-20.04
-    name: E2E cyp on Electron
+    name: E2E cyp run on Electron
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -11,12 +11,24 @@ jobs:
       # and run all Cypress core tests
       - name: Runnning E2E regression test suite with cypress...
         uses: cypress-io/github-action@v2
-  cypress-run2:
+  cypress-run-chrome:
     runs-on: ubuntu-20.04
     # let's make sure our tests pass on Chrome browser
-    name: E2E cyp on Chrome
+    name: E2E cyp run on Chrome
     steps:
       - uses: actions/checkout@v2
       - uses: cypress-io/github-action@v2
         with:
           browser: chrome
+  firefox-run-firefox:
+    name: E2E cyp run on Firefox
+    runs-on: ubuntu-latest
+    container:
+      image: cypress/browsers:node12.16.1-chrome80-ff73
+      options: --user 1001
+    steps:
+      - uses: actions/checkout@v2
+      - uses: cypress-io/github-action@v2
+        with:
+          browser: firefox
+
