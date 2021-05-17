@@ -44,4 +44,4 @@ jobs:
           name: screenshots-in-firefox
           path: screenshots/firefox
 
-      - run: npx image-size screenshots/**/*.png
+      - run: npx image-size screenshots/firefox/*.png
