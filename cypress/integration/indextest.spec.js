@@ -9,11 +9,15 @@
 context('Actions', () => {
     beforeEach(() => {
       cy.visit('index.html')
+      cy.wait(100)
     })
   
     // https://on.cypress.io/interacting-with-elements
   
-    it('.type() - type into a DOM element', () => {
-      cy.get('#ytplayer').click();
+    it('clicks scroll down and verify text appear', () => {
+      cy.get('[data-cy=scrolldown]').click();
+      cy.get('[data-cy=button1]').click();
+      cy.get('[data-cy=buttonresult]').scrollIntoView()
+      cy.get('[data-cy=buttonresult]').contains('shame on you!')
     })
   })

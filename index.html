@@ -33,12 +33,12 @@
     <h3 style="color:white;" id="faq">Frequently asked questions</h3>
     <p style="color:white;">The first rule about fight club is that you do not talk about fight club.</p>
     <p style="color:white;">However, if you do have questions, please e-mail me at no-reply@nowhere.com</p>
-    <button onclick="myFunction()" data-cy="firstheader" style="color:red;">Do not click this button</button>
+    <button onclick="myFunction()" data-cy="button1" style="color:red;">Do not click this button</button>
     <script>
         function myFunction() {
           document.getElementById("dontclickbutton").innerHTML = "Oh no, you clicked that button, and nothing happened, shame on you!";
         }
         </script>
-        <p data-cy="buttonresult" style="color:red;" id="dontclickbutton"></p>
+        <p style="color:red;" id="dontclickbutton" data-cy="buttonresult"></p>
     </body>
 </html>
