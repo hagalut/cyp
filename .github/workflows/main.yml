@@ -20,23 +20,23 @@ jobs:
       - uses: cypress-io/github-action@v2
         with:
           browser: chrome
-  firefox-run-firefox:
+  cypress-run-edge:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: cypress-io/github-action@v2
+        with:
+          browser: edge
+  cypress-run-firefox:
     name: E2E cyp run on Firefox
     # should include Firefox browser install
     # https://github.com/actions/virtual-environments
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu--latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Firefox
-        uses: ./
-        timeout-minutes: 3
+      - uses: actions/checkout@v2
+      - uses: cypress-io/github-action@v2
         with:
-          # let's show browser and system info
-          build: npx cypress info
-          browser: firefox
-
+          browser: edge
       # report screenshot size and store the screenshots as test artifacts
       - uses: actions/upload-artifact@v2
         with:
