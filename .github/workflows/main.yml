@@ -22,6 +22,7 @@ jobs:
           browser: chrome
   cypress-run-edge:
     runs-on: windows-latest
+    name: E2E cyp run on Edge
     steps:
       - uses: actions/checkout@v2
       - uses: cypress-io/github-action@v2
