@@ -37,7 +37,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: cypress-io/github-action@v2
         with:
-          browser: edge
+          browser: firefox
       # report screenshot size and store the screenshots as test artifacts
       - uses: actions/upload-artifact@v2
         with:
